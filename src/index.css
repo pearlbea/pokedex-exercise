@@ -17,15 +17,25 @@ body {
 .pokedex__content {
   display: flex;
   gap: 5rem;
+  margin-top: 1rem;
 }
 
 .pokedex__search-input {
 }
 
 .pokedex__search-results {
+  border-radius: .25rem;
+  border: 2px solid red;
+  height: 495px;
+  overflow-y: scroll;
 }
 
 .pokedex__list-item {
+  border-bottom: 1px solid black;
+  display: flex;
+  gap: .5rem;
+  justify-content: space-evenly;
+  padding: 1rem;
 }
 
 .pokedex__details {

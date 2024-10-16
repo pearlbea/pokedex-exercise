@@ -15,19 +15,19 @@ body {
 }
 
 .pokedex__content {
-  border-radius: .25rem;
-  border: 2px solid red;
   display: flex;
   gap: 5rem;
-  height: 495px;
   margin-top: 1rem;
-  overflow-y: scroll;
 }
 
 .pokedex__search-input {
 }
 
 .pokedex__search-results {
+  border-radius: .25rem;
+  border: 2px solid red;
+  height: 495px;
+  overflow-y: scroll;
 }
 
 .pokedex__list-item {

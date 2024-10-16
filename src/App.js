@@ -18,14 +18,14 @@ function App() {
         fetchPokemon().then(() => {
             /** noop **/
         })
-    }, [searchValue])
+    }, [])
 
     const onSearchValueChange = (event) => {
         const value = event.target.value
         setSearchValue(value)
 
         setPokemon(
-            pokemonIndex.filter(monster => !monster.name.includes(value))
+            pokemonIndex.filter(monster => monster.name.includes(value))
         )
     }
 

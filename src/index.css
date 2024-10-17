@@ -20,10 +20,20 @@ body {
   margin-top: 1rem;
 }
 
+@media (max-width: 700px) {
+  .pokedex__content {
+    flex-flow: column wrap;
+    gap: 2em;
+  }
+  .pokedex__search-results {
+    order: 2;
+  }
+}
+
 .pokedex__search-results {
   border-radius: .25rem;
   border: 2px solid red;
-  height: 495px;
+  max-height: 495px;
   overflow-y: scroll;
 }
 

@@ -48,6 +48,12 @@ Please take some time to answer the following questions. Your answers should go 
 
 - Given more time, what would you suggest for improving the performance of this app?
 
+    The largest contentful paint, the main list of pokemon, is a bit slow (2.5 sec). To speed up rendering, we could lazy load the pokemon items that are not visible before scrolling. 
+
 - Is there anything you would consider doing if we were to go live with this app?
 
+   I would add tests! And to make testing easier, I would break up App.js component into a few separate components. 
+
 - What was the most challenging aspect of this work for you (if at all)?
+
+    The most challenging part was understanding how to find the right evolution information in the Pokedex API. I didn't realize initially that I needed to fetch the species information to find the evolution chain id to use for the evolution chain request. Instead, I was passing in the Pokemon id, but I could tell, even with my scant knowledge of Pokemon, the results didn't make sense.

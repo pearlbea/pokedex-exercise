@@ -50,7 +50,7 @@ Please take some time to answer the following questions. Your answers should go 
 
     In its current state, the app's page load performance is fine. However, if it grows larger and more complex, some chanages could help it remain performant: 
 
-    * We could paginite the initial request for the Pokemon list so that initially fetch only the item that are visible before scrolling. Then we could request the rest of the list without blocking the initial rendering. (This could have an impact on search functionality that would need handling.)
+    * We could paginate the initial request for the Pokemon list so that we fetch only the items that are visible before scrolling. Then we could request the rest of the list without blocking the initial rendering. (This could have an impact on search functionality that would need handling.)
     * Assuming that that design for the list items becomes more complex, we could use a virtual list to delay rendering Pokemon further down on the list until the user starts to scroll. 
     * To improve the loading of the details section, it might make sense to combine the two network requests -- to get the species and the evolution chain -- into a single request. 
     * We could also consider server-rendering the app with the initial Pokemon list embedded into the HTML. This could improve the intial page load time and would also enhance SEO.
@@ -59,10 +59,7 @@ Please take some time to answer the following questions. Your answers should go 
 
     I would further break the App component into smaller components. Specifially, I would extract the Details view into its own component. Breaking the app into smaller components makes the app more modular and easier to maintain. It would also make the app more performant: we wouldn't have load all the components at once. The Details component would be a good candidate for lazy loading since it's not needed until the user takes action.
 
-   Breaking the App into separate components would also make it easier to test! Before going live with the app, I would add component-level tests to ensure that the components behave as intended. This would prevent us from breaking the components when we make changes later on. 
-
-
-
+   Breaking the App into separate components would also make it easier to test! Before going live with the app, I would add component-level tests to ensure that the components behave as intended. This would also prevent us from breaking the components when we make changes later on. 
 
 - What was the most challenging aspect of this work for you (if at all)?
 
